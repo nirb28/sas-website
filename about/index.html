@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>About Us - Cerebra ML</title>
+    <!-- Linking Google Fonts for modern font style -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="about.css">
+     
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header-wrapper">
+        <header>
+            <!-- Logo and Organization Name -->
+            <a href="/home/index.html" class="logo">
+                <img src="./images/logo.png" alt="Cerebra ML Logo" class="logo-img">
+                <span class="org-name">Cerebra ML</span>
+            </a>
+            
+            <!-- Navigation Container -->
+            <div class="nav-container">
+                <!-- Desktop Navigation -->
+                <nav class="desktop-nav">
+                    <div class="nav-links-container">
+                        <a href="/home/index.html" class="nav-link">Home</a>
+                        <a href="/about/index.html" class="nav-link">About</a>
+                        <a href="/curriculum/index.html" class="nav-link">Curriculum</a>
+                        <a href="/contact/index.html" class="nav-link">Contact</a>
+                    </div>
+                </nav>
+            </div>
+    
+            <!-- Register Button -->
+            <a href="/register/index.html" class="register-btn">Register</a>
+        
+            <!-- Mobile Navigation -->
+            <nav class="mobile-nav">
+                <button class="menu-icon">
+                    <span class="menu-text">Menu</span>
+                    <div class="menu-icon-lines">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+                <div class="menu-content">
+                    <a href="/home/index.html">Home</a>
+                    <a href="/about/index.html">About</a>
+                    <a href="/curriculum/index.html">Curriculum</a>
+                    <a href="/contact/index.html">Contact</a>
+                    <a href="/register/index.html">Register</a>
+                </div>
+            </nav>
+        </header>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <canvas id="particleCanvasAbout"></canvas>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">About Us</h1>
+                <p class="hero-subtitle">
+                    Established in September 2023, Cerebra ML provides free, accessible machine learning and AI education for all.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission-section">
+        <div class="container">
+            <div class="mission-content">
+                <div class="mission-text">
+                    <h2 class="mission-title">Our Mission</h2>
+                    <div class="mission-statement">
+                        <p>
+                            At Cerebra ML, we believe all students deserve access to high-quality education without financial barriers. Our mission is to empower middle and early high school students with a solid foundation in machine learning and artificial intelligence through free, accessible resources and programs. The challenge is clear: premium courses like those on Coursera are expensive, while free options are often too technical for younger learners. As high school juniors who have faced these struggles firsthand, we are committed to creating resources that are accessible, practical, and tailored to the needs of younger students.
+                        </p>
+                    </div>
+                </div>
+                <div class="mission-image">
+                    <img src="/images/placeholder.svg" alt="AI Education Illustration" class="mission-illustration">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <h2 class="team-title">Meet Our Team</h2>       
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image-container">
+                        <img src="images/dylan.jpg" alt="Team Member 1" class="member-image">
+                    </div>
+                    <div class="member-info">
+                        <div class="member-header">
+                            <h3 class="member-name">Dylan Nguyen</h3>
+                            <span class="member-title">Co-Founder</span>
+                        </div>
+                        <p class="member-bio hidden">Hello, I’m Dylan Nguyen, a 16-year-old student passionate about machine learning and its applications. I started with Andrew Ng’s Machine Learning Specialization, where I learned to implement techniques such as gradient descent, anomaly detection, and neural networks. My main project, Vocalize, is an app that uses generative transformers to help mute individuals communicate more effectively. This project has received $10,000 in funding from Z Fellows ( < 1% acceptance rate), and $2500 as a state finalist in the Samsung Solve for Tomorrow competition. Currently, I’m conducting research in exoplanetary systems at CSULB, and am eager to use machine learning to investigate further.</p>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image-container">
+                        <img src="images/sahej.jpg" alt="Team Member 2" class="member-image">
+                    </div>
+                    <div class="member-info">
+                        <div class="member-header">
+                            <h3 class="member-name">Sahej Singh</h3>
+                            <span class="member-title">Co-Founder</span>
+                        </div>
+                        <p class="member-bio hidden">Hi, I’m Sahej Singh, a 17-year-old student passionate about machine learning and scientific research. I started with UC Berkeley’s machine learning course, learning foundational concepts and mathematics. I have since honed this through hands-on, high-impact projects. These include developing predictive models for stock market data analysis, leveraging regression algorithms to identify common market trends, and using Tensorflow & Keras to optimize professional tennis performance analytics. Currently, I’m spearheading a research project on SLC transporters, where I am able to use statistics and machine learning to explore these complex biological systems.</p>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image-container">
+                        <img src="images/jake.jpg" alt="Team Member 3" class="member-image">
+                    </div>
+                    <div class="member-info">
+                        <div class="member-header">
+                            <h3 class="member-name">Jake Yang</h3>
+                            <span class="member-title">Web Developer</span>
+                        </div>
+                        <p class="member-bio hidden">Hello, I’m Jake Yang, a 16-year-old student with a strong passion for software development and academics. I started programming as part of the FBLA competitions, learning the foundations of web design and backend programming. My most recent project is the website you are currently looking at, where I learned how to use frameworks & tools such as HTML, CSS, Node.js, and CanvasJS. I also learned some fundamental machine learning techniques, including regression algorithms and matrix manipulation. Outside of computer science, I’m a varsity tennis player and black belt in Taekwondo, where I’ve developed discipline, focus, and a competitive drive that applies to all aspects.</p>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image-container">
+                        <img src="images/shivam.jpg" alt="Team Member 4" class="member-image">
+                    </div>
+                    <div class="member-info">
+                        <div class="member-header">
+                            <h3 class="member-name">Shivam Parmar</h3>
+                            <span class="member-title">Web Developer</span>
+                        </div>
+                        <p class="member-bio hidden">Hi! My name is Shivam Parmar, and I’m a 16-year-old student passionate about cybersecurity and machine learning. I’ve competed in cybersecurity competitions for all of my high school career, ranking top 15% nationally in CyberPatriots for three years in a row, and securing multiple top 10 placements at the FBLA State Conference. My coursework has focused exclusively on cybersecurity, incident response, and access controls. I’m dedicated to sharing my knowledge and experience to train the next generation of machine learning students through our nonprofit organization. My goal is to empower others to excel in the field of ML, and make it accessible to all.</p>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image-container">
+                        <img src="images/damian.jpg" alt="Team Member 5" class="member-image">
+                    </div>
+                    <div class="member-info">
+                        <div class="member-header">
+                            <h3 class="member-name">Damian Slavkov</h3>
+                            <span class="member-title">Content Designer</span>
+                        </div>
+                        <p class="member-bio hidden">Hello there! I’m Damian Slavkov, a 17-year-old student passionate about machine learning and creative design. Growing up, I loved experimenting with both design software and Legos, which sparked my interest in technology and engineering. I decided to investigate further, and have since competed in our school’s FIRST Robotics team and CyberPatriots team. On the CyberPatriots team, I have consistently ranked in the top 15% nationally, and raised hundreds of dollars for the organization. In Robotics, I built circuit systems and soldered wires for the robot. Outside of academics, I am varsity captain of the boy’s water polo and swim teams.</p>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image-container">
+                        <img src="images/anthony.jpg" alt="Team Member 6" class="member-image">
+                    </div>
+                    <div class="member-info">
+                        <div class="member-header">
+                            <h3 class="member-name">Anthony Pinheiro</h3>
+                            <span class="member-title">Media Director</span>
+                        </div>
+                        <p class="member-bio hidden">Hi there, my name is Anthony Pinheiro, a 16-year-old student passionate about robotic engineering and programming. I’m involved in many communities around campus including our FIRST Robotics team, Mock Trial Club, Future Business Leaders of America, etc. In robotics, I have programmed in both C++ and Java for some of the robot’s complex functions, including movement of wheels and the projectile firing mechanism. Additionally, I’m currently a Boy Scout through Troop 99, being a three-time recipient of the Patrol Leader award and a current candidate for Eagle scout. I’m eager to use my past experiences in advancing machine learning education for all future students.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+   <!-- Footer HTML -->
+    <footer class="footer-section">
+        <div class="container footer-container">
+            <div class="footer-content">
+                <!-- Social Media Section -->
+                <div class="footer-social">
+                    <h3>Follow us on social media</h3>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/cerebraml/" class="social-link" target="_blank" rel="noopener noreferrer">
+                            <div class="icon-box">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <span>Instagram</span>
+                            <div class="arrow-icon">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/company/cerebra-ml/" class="social-link" target="_blank" rel="noopener noreferrer">
+                            <div class="icon-box">
+                                <i class="fab fa-linkedin-in"></i>
+                            </div>
+                            <span>LinkedIn</span>
+                            <div class="arrow-icon">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Divider -->
+                <div class="footer-divider"></div>
+
+                <!-- Navigation Section -->
+                <div class="footer-nav">
+                    <h3>Navigation</h3>
+                    <nav class="footer-links">
+                        <a href="/">Home</a>
+                        <a href="/about">About</a>
+                        <a href="/curriculum">Curriculum</a>
+                        <a href="/contact">Contact</a>
+                        <a href="/register">Register</a>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p>© 2025 Cerebra ML – All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Load generic scripts -->
+    <script src="about.js"></script>
+    <!-- Load particle animation script-->
+     <script src ="particles.js"></script>
+
+</body>
+</html>

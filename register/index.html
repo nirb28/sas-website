@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Cerebra ML</title>
+    <link rel="stylesheet" href="register.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        
+<body>
+    <!-- Header Section -->
+    <div class="header-wrapper">
+        <header>
+            <!-- Logo and Organization Name -->
+            <a href="/home/index.html" class="logo">
+                <img src="./images/logo.png" alt="Cortex ML Logo" class="logo-img">
+                <span class="org-name">Cerebra ML</span>
+            </a>
+            
+            <!-- Navigation Container -->
+            <div class="nav-container">
+                <!-- Desktop Navigation -->
+                <nav class="desktop-nav">
+                    <div class="nav-links-container">
+                        <a href="/home/index.html" class="nav-link">Home</a>
+                        <a href="/about/index.html" class="nav-link">About</a>
+                        <a href="/curriculum/index.html" class="nav-link">Curriculum</a>
+                        <a href="/contact/index.html" class="nav-link">Contact</a>
+                    </div>
+                </nav>
+            </div>
+    
+            <!-- Register Button -->
+            <a href="/register/index.html" class="register-btn">Register</a>
+        
+            <!-- Mobile Navigation -->
+            <nav class="mobile-nav">
+                <button class="menu-icon">
+                    <span class="menu-text">Menu</span>
+                    <div class="menu-icon-lines">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+                <div class="menu-content">
+                    <a href="/home/index.html">Home</a>
+                    <a href="/about/index.html">About</a>
+                    <a href="/curriculum/index.html">Curriculum</a>
+                    <a href="/contact/index.html">Contact</a>
+                    <a href="/register/index.html">Register</a>
+                </div>
+            </nav>
+        </header>
+    </div>
+
+    <div class="register-page-wrapper">
+        <div class="main-content">
+            <!-- Left column -->
+            <div class="program-info">
+                <div class="hero">
+                    <h1 class="hero-title">Register for Our ML Program</h1>
+                    <p class="hero-description">
+                        Join our monthly cohorts of high school students gaining hands-on experience in applied machine learning. 
+                        Our 3-week intensive program provides real-world project experience and research opportunities in AI/ML.
+                    </p>
+                </div>
+            </div>
+        
+            <!-- Right column -->
+            <div class="register-form-container">
+                <form class="register-form" id="registrationForm">
+                    <h2>Registration Form</h2>
+                    
+                    <div class="name-fields">
+                        <div class="form-group">
+                            <label for="parentName">Parent Name</label>
+                            <input type="text" id="parentName" name="parentName" required>
+                        </div>
+                
+                        <div class="form-group">
+                            <label for="studentName">Student Name</label>
+                            <input type="text" id="studentName" name="studentName" required>
+                        </div>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="parentEmail">Parent Email</label>
+                        <input type="email" id="parentEmail" name="parentEmail" required>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="studentEmail">Student Email</label>
+                        <input type="email" id="studentEmail" name="studentEmail" required>
+                    </div>
+                
+                    <div class="form-group">
+                        <label>Student Grade</label>
+                        <div class="grade-selector">
+                            <div class="grade-display" id="gradeDisplay">Select Grade</div>
+                            <input type="hidden" id="studentGrade" name="studentGrade" required>
+                        </div>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="interest">Why are you interested in Machine Learning?</label>
+                        <textarea id="interest" name="interest" required></textarea>
+                    </div>
+                
+                    <button type="submit" class="btn-submit">
+                        Register Now
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"></path>
+                            <path d="m12 5 7 7-7 7"></path>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Grade Selection Modal -->
+    <div id="gradeModal" class="grade-modal">
+        <div class="grade-modal-content">
+            <h3>Select Grade Level</h3>
+            <div class="grade-options-container">
+                <div class="grade-option" data-grade="6">6th Grade</div>
+                <div class="grade-option" data-grade="7">7th Grade</div>
+                <div class="grade-option" data-grade="8">8th Grade</div>
+                <div class="grade-option" data-grade="9">9th Grade</div>
+                <div class="grade-option" data-grade="other">Other</div>
+            </div>
+            <!-- Other Grade Input (initially hidden) -->
+            <div id="otherGradeContainer" class="other-grade-container" style="display: none;">
+                <label for="otherGrade">Enter Grade Level:</label>
+                <input type="number" id="otherGrade" min="1" max="12" placeholder="Enter grade (1-12)">
+            </div>
+            <div class="modal-buttons">
+                <button id="cancelGrade" class="cancel-btn">Cancel</button>
+                <button id="confirmGrade" class="confirm-btn">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="notification-container">
+        <div id="successNotification" class="notification">
+          <div class="notification-content">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            <div class="notification-text">
+              <h4>Registration Successful!</h4>
+              <p>Thank you for registering for our Machine Learning course. Please check your email for:</p>
+              <ul>
+                <li>Course cohort details</li>
+                <li>Getting started instructions</li>
+                <li>Pre-course preparation materials</li>
+              </ul>
+            </div>
+            <button class="notification-close" aria-label="Close notification">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+    </div>
+
+    <!-- Footer HTML -->
+    <footer class="footer-section">
+        <div class="container footer-container">
+            <div class="footer-content">
+                <!-- Social Media Section -->
+                <div class="footer-social">
+                    <h3>Follow us on social media</h3>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/cerebraml/" class="social-link" target="_blank" rel="noopener noreferrer">
+                            <div class="icon-box">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <span>Instagram</span>
+                            <div class="arrow-icon">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/company/cerebra-ml/" class="social-link" target="_blank" rel="noopener noreferrer">
+                            <div class="icon-box">
+                                <i class="fab fa-linkedin-in"></i>
+                            </div>
+                            <span>LinkedIn</span>
+                            <div class="arrow-icon">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Divider -->
+                <div class="footer-divider"></div>
+
+                <!-- Navigation Section -->
+                <div class="footer-nav">
+                    <h3>Navigation</h3>
+                    <nav class="footer-links">
+                        <a href="/">Home</a>
+                        <a href="/about">About</a>
+                        <a href="/curriculum">Curriculum</a>
+                        <a href="/contact">Contact</a>
+                        <a href="/register">Register</a>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p>© 2025 Cerebra ML – All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="register.js"></script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Linking Google Fonts for modern font style -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.css' rel='stylesheet' />
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="curriculum.css">
+      
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header-wrapper">
+        <header>
+            <!-- Logo and Organization Name -->
+            <a href="/home/index.html" class="logo">
+                <img src="./images/logo.png" alt="Cortex ML Logo" class="logo-img">
+                <span class="org-name">Cerebra ML</span>
+            </a>
+            
+            <!-- Navigation Container -->
+            <div class="nav-container">
+                <!-- Desktop Navigation -->
+                <nav class="desktop-nav">
+                    <div class="nav-links-container">
+                        <a href="/home/index.html" class="nav-link">Home</a>
+                        <a href="/about/index.html" class="nav-link">About</a>
+                        <a href="/curriculum/index.html" class="nav-link">Curriculum</a>
+                        <a href="/contact/index.html" class="nav-link">Contact</a>
+                    </div>
+                </nav>
+            </div>
+    
+            <!-- Register Button -->
+            <a href="/register/index.html" class="register-btn">Register</a>
+        
+            <!-- Mobile Navigation -->
+            <nav class="mobile-nav">
+                <button class="menu-icon">
+                    <span class="menu-text">Menu</span>
+                    <div class="menu-icon-lines">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+                <div class="menu-content">
+                    <a href="/home/index.html">Home</a>
+                    <a href="/about/index.html">About</a>
+                    <a href="/curriculum/index.html">Curriculum</a>
+                    <a href="/contact/index.html">Contact</a>
+                    <a href="/register/index.html">Register</a>
+                </div>
+            </nav>
+        </header>
+    </div>
+
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Explore Our Curriculum</h1>
+            <p class="hero-description">Empowering young minds with the knowledge of Machine Learning and Data Science. Join our free course today and be part of the future!</p>
+            <a href="#curriculum-details" class="btn hero-btn">Register</a>
+        </div>
+    </section>
+      
+    <section class="curriculum-section">
+        <div class="container">
+            <div class="flashcard-container">
+                <div class="week-navigation">
+                    <button class="week-btn active" data-week="1">Week 1</button>
+                    <button class="week-btn" data-week="2">Week 2</button>
+                    <button class="week-btn" data-week="3">Week 3</button>
+                </div>
+    
+                <div class="flashcards-wrapper">
+                    <!-- Flashcards will be generated here -->
+                </div>
+    
+                <button class="nav-btn prev-btn" aria-label="Previous">←</button>
+                <button class="nav-btn next-btn" aria-label="Next">→</button>
+    
+                <div class="day-indicator"></div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="curriculum-container">
+      <div class="curriculum-header">
+        <div>
+          <h1 class="curriculum-title">Explore Our<br>Curriculum</h1>
+          <p class="curriculum-description">
+            Empowering young minds with the knowledge of Machine Learning. Join our free course today and be part of the future!
+          </p>
+        </div>
+      </div>
+  
+      <div class="principles-grid">
+        <div class="principle-card">
+          <div class="principle-icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M12 6V2m0 4v4m0 4v4m0 4v4M4 12H2m4 0h4m4 0h4m4 0h2"/>
+            </svg>
+          </div>
+          <h3 class="principle-title">Foundations of Data Science</h3>
+          <p class="principle-description">Learn the core concepts of data analysis, statistics, and programming through interactive lessons.</p>
+        </div>
+  
+        <div class="principle-card">
+          <div class="principle-icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </div>
+          <h3 class="principle-title">Machine Learning Basics</h3>
+          <p class="principle-description">Explore fundamental machine learning concepts with hands-on projects and real-world applications.</p>
+        </div>
+  
+        <div class="principle-card">
+          <div class="principle-icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+            </svg>
+          </div>
+          <h3 class="principle-title">Practical Projects</h3>
+          <p class="principle-description">Apply your knowledge through guided projects that solve real-world problems using data science.</p>
+        </div>
+      </div>
+  </div>
+
+    <!-- Footer HTML -->
+    <footer class="footer-section">
+        <div class="container footer-container">
+            <div class="footer-content">
+                <!-- Social Media Section -->
+                <div class="footer-social">
+                    <h3>Follow us on social media</h3>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/cerebraml/" class="social-link" target="_blank" rel="noopener noreferrer">
+                            <div class="icon-box">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <span>Instagram</span>
+                            <div class="arrow-icon">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/company/cerebra-ml/" class="social-link" target="_blank" rel="noopener noreferrer">
+                            <div class="icon-box">
+                                <i class="fab fa-linkedin-in"></i>
+                            </div>
+                            <span>LinkedIn</span>
+                            <div class="arrow-icon">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Divider -->
+                <div class="footer-divider"></div>
+
+                <!-- Navigation Section -->
+                <div class="footer-nav">
+                    <h3>Navigation</h3>
+                    <nav class="footer-links">
+                        <a href="/">Home</a>
+                        <a href="/about">About</a>
+                        <a href="/curriculum">Curriculum</a>
+                        <a href="/contact">Contact</a>
+                        <a href="/register">Register</a>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p>© 2025 Cerebra ML – All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Load generic scripts -->
+    <script src="curriculum.js"></script>
+
+</body>
+</html>

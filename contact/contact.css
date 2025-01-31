@@ -1,0 +1,603 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Update header styles */
+.header-wrapper {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    z-index: 1999;
+}
+
+/* Remove any fade-in classes from header */
+.header-wrapper, header {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+/* Optional: Add a smooth shadow when scrolling */
+.header-wrapper {
+    transition: box-shadow 0.3s ease;
+}
+
+.header-wrapper:not(:hover) {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header {
+    height: 65px;
+    padding: 10px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    flex-shrink: 0;
+    flex-basis: 200px; /* Added fixed width for logo section */
+}
+
+.logo-img {
+    width: 60px;
+    height: 60px;
+}
+
+.org-name {
+    color: #000000;
+    font-size: 22px;
+    font-weight: 500;
+    margin-left: 12px;
+    text-decoration: none;
+    line-height: 45px;
+}
+
+.nav-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto; /* Changed from margin: 0 20px */
+    position: absolute; /* Added absolute positioning */
+    left: 0; /* Position from left edge */
+    right: 0; /* Position from right edge */
+}
+
+.desktop-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links-container {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-link {
+    color: #000000;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+}
+
+.nav-link:hover {
+    color: #666666;
+}
+
+.register-btn {
+    background-color: #000000;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease, background-color 0s, background-image 0.3s ease;
+    flex-shrink: 0;
+    margin-left: auto;
+    display: inline-block;
+    position: relative;
+}
+
+.register-btn:hover {
+    background: linear-gradient(90deg, #2D7FF9 0%, #87B9FF 100%);
+    transform: translateY(-2px);
+}
+
+/* Rest of the CSS remains the same */
+.mobile-nav {
+    display: none;
+}
+
+.menu-icon {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 45px;
+    background: none;
+    border: none;
+    color: #000000;
+    padding: 0 10px;
+    flex-direction: row-reverse;
+}
+
+.menu-text {
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 8px;
+}
+
+.menu-icon-lines {
+    width: 24px;
+    height: 18px;
+    position: relative;
+}
+
+.menu-icon-lines span {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+    transition: all 0.3s ease;
+    left: 0;
+    transform-origin: center; /* Changed from left center */
+}
+
+.menu-icon-lines span:nth-child(1) {
+    top: 0;
+}
+
+.menu-icon-lines span:nth-child(2) {
+    top: 8px;
+}
+
+.menu-icon-lines span:nth-child(3) {
+    top: 16px;
+}
+
+/* Updated animation styles */
+.menu-icon.active .menu-icon-lines span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg); /* Updated transform */
+    top: 0;
+}
+
+.menu-icon.active .menu-icon-lines span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.active .menu-icon-lines span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg); /* Updated transform */
+    top: 16px;
+}
+
+.menu-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 10px 0;
+}
+
+.menu-content.show {
+    display: block;
+}
+
+.menu-content a {
+    color: #000000;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.menu-content a:hover {
+    background-color: #f5f5f5;
+}
+
+@media screen and (max-width: 1024px), (min-width: 1024px) and (max-zoom: 200%) {
+    .desktop-nav,
+    .register-btn,
+    .org-name {
+        display: none;
+    }
+    
+    .mobile-nav {
+        display: block;
+    }
+    
+    header {
+        padding: 10px 20px;
+    }
+
+    .menu-text {
+        display: none;
+    }
+
+    .menu-icon {
+        padding: 0;
+        flex-direction: row;
+    }
+
+    .menu-content {
+        display: none;
+    }
+
+    .menu-content.show {
+        display: block;
+    }
+}
+
+.contact-wrapper {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background: #ffffff;
+}
+/* Hero Section */
+/* Editing existing block in contact.css */
+.hero {
+    background: transparent;  /* Changed to white background */
+    text-align: center;
+    padding: 120px 0 10px 0;  /* Adjusted padding to match home page */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    min-height: 100px;
+}
+
+.hero h2 {
+    font-size: 72px;  /* Increased from 36px */
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    background: linear-gradient(90deg, #257af8 0%, #6fabff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero p {
+    font-size: 20px;  /* Increased from default */
+    max-width: 800px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+    color: #666666;  /* Added softer text color */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFFFFF; /* White background */
+    color: #333;
+    margin: 0;
+    overflow-x: hidden;
+}
+/* Contact Form */
+/* Editing existing block in contact.css */
+/* Editing existing block in contact.css */
+.contact-form-section {
+    padding: 30px;
+    margin: 30px auto;
+}
+
+.contact-form {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    padding: 40px;
+    max-width: 800px;
+    margin: 40px auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1),
+                0 -2px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contactForm {
+    width: 100%;
+    max-width: 600px; /* Set exact width for the form content */
+    margin: 0 auto;   /* Center the form content */
+}
+
+.form-group {
+    width: 100%;      /* Take full width of parent (#contactForm) */
+    margin-bottom: 24px;
+}
+
+/* Ensure input and textarea have consistent sizing */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;       /* Take full width of parent (.form-group) */
+    padding: 14px 16px; /* Add consistent padding */
+    border: 2px solid #E2E8F0; /* Same border style */
+    border-radius: 12px; /* Same rounded corners */
+    font-size: 0.95em; /* Consistent font size */
+    font-family: 'Poppins', sans-serif; /* Match font style to ensure consistency */
+    transition: all 0.3s ease; /* Smooth transition on hover/focus */
+    background: #FFFFFF; /* Solid white background for inputs */
+    box-sizing: border-box; /* Ensure padding and border are included in total width */
+    resize: none; /* Prevent the textarea from being resized by the user */
+}
+
+/* Add hover and focus effects for better interactivity */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #87B9FF; /* Highlight with a subtle blue border */
+    outline: none; /* Remove the default browser outline */
+}
+
+/* Fix alignment of the button */
+.contact-form button {
+    width: 100%;       /* Take full width of parent (#contactForm) */
+    padding: 16px 32px;
+    font-size: 1.1em;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background-color: #000000;
+    color: white;
+    border: none;
+
+    /* Match box-sizing to ensure alignment with input fields */
+    box-sizing: border-box;
+
+    /* Add consistent shadow and margin */
+    transition: all 0.3s ease, background-color 0s, background-image 0.3s ease;
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect for button */
+.contact-form button:hover {
+    background: linear-gradient(90deg, #2D7FF9 0%, #87B9FF 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(45, 127, 249, 0.3);
+}
+
+/* Error Message Styling */
+.error-message {
+    color: #FF0000;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.error {
+    border-color: #FF0000; /* Highlight the input field with an error */
+}
+
+/* Thank-You Message Styling */
+.thank-you-message {
+    text-align: center;
+    padding: 20px;
+    background-color: #F7F7F7;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.thank-you-message h2 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.thank-you-message p {
+    font-size: 1em;
+    color: #555;
+}
+
+
+/* Footer Styles */
+.footer-section {
+    position: relative;
+    background: #ffffff;  /* Changed from #002147 to white */
+    padding: 120px 0 60px;  /* Increased padding top and bottom */
+    color: black;  /* Changed from white to black */
+    overflow: hidden;
+    z-index: 1;
+    width: 100%;
+    margin: 0 auto;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    box-sizing: border-box;
+}
+
+/* Footer Background Curve */
+.footer-section::before {
+    content: "";
+    position: absolute;
+    top: -70px;  /* Adjusted for taller curve */
+    left: 0;
+    width: 100%;
+    height: 140px;  /* Increased height for taller curve */
+    background-color: #ffffff;
+    clip-path: ellipse(75% 100% at 50% 0%);
+    -webkit-clip-path: ellipse(75% 100% at 50% 0%);
+    z-index: 0;
+}
+
+/* Container inside the footer */
+.footer-container {
+    max-width: 100%;  /* Changed from 1800px to use full width */
+    margin: 0 auto;
+    padding: 0 120px;  /* Increased padding to maintain some margins */
+    position: relative;
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;  /* Changed from center to space-between */
+    align-items: flex-start;
+    margin-bottom: 40px;
+    gap: 120px;  /* Increased gap from 60px */
+}
+
+
+/* Social Media Section */
+.footer-social {
+    flex: 1;
+    max-width: 600px;  /* Increased from 400px */
+}
+
+/* Header styles for sections */
+.footer-social h3,
+.footer-nav h3 {
+    font-size: 28px;  /* Increased from 24px */
+    margin-bottom: 40px;  /* Increased from 30px */
+    color: black;
+}
+
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    background: #f5f5f5;  /* Changed to slightly darker shade of white */
+    border-radius: 12px;
+    text-decoration: none;
+    color: black;
+    transition: transform 0.3s ease;
+    border: none;  /* Removed border */
+}
+
+
+.icon-box {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.social-link span {
+    flex: 1;
+    font-size: 16px;
+}
+
+.arrow-icon {
+    margin-left: auto;
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover {
+    transform: translateX(5px);  /* Removed background color change */
+}
+
+.social-link:hover .arrow-icon {
+    transform: rotate(-45deg); /* Changed to rotate upwards */
+}
+
+/* Divider */
+.footer-divider {
+    width: 1px;
+    background: rgba(0, 0, 0, 0.2);  /* Changed from rgba(255, 255, 255, 0.2) to black */
+    align-self: stretch;
+}
+
+/* Navigation Section */
+.footer-nav {
+    flex: 1;
+    max-width: 600px;  /* Increased from 400px */
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  /* Changed to 2 columns */
+    gap: 25px 40px;  /* Increased gap, different values for row/column */
+}
+
+
+.footer-links a {
+    color: rgba(0, 0, 0, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 20px;  /* Increased from default */
+}
+
+.footer-links a:hover {
+    color: black;  /* Changed from white to black */
+}
+
+/* Copyright */
+.footer-bottom {
+    text-align: center;
+    padding-top: 60px;  /* Increased from 40px */
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 18px;  /* Increased from default */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-section {
+        padding: 80px 0 40px;  /* Adjusted for mobile */
+    }
+    
+    .footer-links {
+        grid-template-columns: 1fr;  /* Single column on mobile */
+        gap: 20px;
+    }
+    
+    .footer-social h3,
+    .footer-nav h3 {
+        font-size: 24px;  /* Slightly smaller on mobile */
+        margin-bottom: 30px;
+    }
+    
+    .footer-links a {
+        font-size: 18px;  /* Slightly smaller on mobile */
+    }
+}
+
+/* Initial state for the fade-in elements */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px); /* Slight downward shift */
+    transition: opacity 0.8s ease, transform 0.8s ease; /* Smooth transition */
+}
+
+/* Final state when 'visible' class is added */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0); /* Reset to original position */
+}

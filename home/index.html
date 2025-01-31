@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home - Cerebra ML</title>
+    <!-- Linking Google Fonts for modern font style -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.css' rel='stylesheet' />
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="home.css">
+        
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header-wrapper">
+        <header>
+            <!-- Logo and Organization Name -->
+            <a href="/home/index.html" class="logo">
+                <img src="./images/logo.png" alt="Cortex ML Logo" class="logo-img">
+                <span class="org-name">Cerebra ML</span>
+            </a>
+            
+            <!-- Navigation Container -->
+            <div class="nav-container">
+                <!-- Desktop Navigation -->
+                <nav class="desktop-nav">
+                    <div class="nav-links-container">
+                        <a href="/home/index.html" class="nav-link">Home</a>
+                        <a href="/about/index.html" class="nav-link">About</a>
+                        <a href="/curriculum/index.html" class="nav-link">Curriculum</a>
+                        <a href="/contact/index.html" class="nav-link">Contact</a>
+                    </div>
+                </nav>
+            </div>
+    
+            <!-- Register Button -->
+            <a href="/register/index.html" class="register-btn">Register</a>
+        
+            <!-- Mobile Navigation -->
+            <nav class="mobile-nav">
+                <button class="menu-icon">
+                    <span class="menu-text">Menu</span>
+                    <div class="menu-icon-lines">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+                <div class="menu-content">
+                    <a href="/home/index.html">Home</a>
+                    <a href="/about/index.html">About</a>
+                    <a href="/curriculum/index.html">Curriculum</a>
+                    <a href="/contact/index.html">Contact</a>
+                    <a href="/register/index.html">Register</a>
+                </div>
+            </nav>
+        </header>
+    </div>
+
+    <div class="page-wrapper">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div id="shapeCanvas"></div>
+            <div class="container">
+                <h2><span>An Accessible Pathway</span> to Machine Learning</h2>
+                <p>Cerebra ML is a nonprofit dedicated to introducing middle school & high school students to machine learning, inspiring curiosity and innovation. Our mission is to make quality education accessible to all, offering engaging and hands-on learning experiences.</p>
+                <a href="/about/index.html"" class="btn join-us-btn">Learn More <span class="arrow">&gt;</span></a>
+            </div>
+        </section>
+
+        <!-- Our Core Values -->
+        <section id="boxes" class="core-values-section">
+            <div class="gradient-container">
+                <h2 class="section-title">Our <span class="highlight">Core Values</span></h2>
+                <div class="values-container">
+                    <div class="value-box">
+                        <h3>Accessibility</h3>
+                        <i class="fas fa-desktop"></i>
+                        <p>We believe in accessibility, ensuring that all students have the opportunity to learn and grow, regardless of their background or resources.</p>
+                    </div>
+                    <div class="value-box">
+                        <h3>Community</h3>
+                        <i class="fas fa-users"></i>
+                        <p>We foster a community-driven learning environment, encouraging peer-to-peer collaboration rather than a traditional hierarchical approach.</p>
+                    </div>
+                    <div class="value-box">
+                        <h3>Innovation</h3>
+                        <i class="fa-solid fa-gears"></i>
+                        <p>We embrace innovation in our teaching methods and curriculum, preparing students for the future of technology through creative and forward-thinking approaches.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calendar -->
+        <section class="course-calendar">
+            <div class="container">
+                <h2 class="calendar-title">Course Calendar</h2>
+                <div id='calendar'></div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq" style="margin-top: 20px;">
+            <div class="container">
+                <h2 style="font-size: 72px; color: #000000; margin-top: 10px;">FAQs</h2>
+                <div class="faq-item">
+                    <h3>What age group is this course for?</h3>
+                    <div class="faq-answer">
+                        This course is designed for middle school - early high school students, generally between the ages of 11 and 14. However, any age is free to enroll. You can always unenroll for free, later, if the course is not suited for you.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h3>Do I need any prior programming knowledge?</h3>
+                    <div class="faq-answer">
+                        No prior programming knowledge is required! Our course starts with the basics and builds up gradually, ensuring that every student is able to follow along. Upon sign-up, free resources will be given for learning the prerequisite programming skills.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h3>How much does it cost to join?</h3>
+                    <div class="faq-answer">
+                        This course is completely free. We are a nonprofit organization dedicated to making machine learning education accessible to all students, regardless of their financial situation.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h3>Are the courses available online?</h3>
+                    <div class="faq-answer">
+                        Yes! Our course is hosted online via Discord. Upon sign-up, a link to the platform will be sent.
+                    </div>
+                </div>
+                <div class="faq-item">
+                <h3>What topics are covered in the course?</h3>
+                <div class="faq-answer">
+                    Our course covers many topics starting from basic regression and classification algorithms and branching to more complex architectures such as neural networks and decision trees. See our Curriculum page for more.
+                </div>
+                </div>
+                <div class="faq-item">
+                    <h3>How long does the course last?</h3>
+                    <div class="faq-answer">
+                        Our course lasts 3 weeks, with about 4 hours of instruction via 2 lectures every week. The course is always run across the first three weeks of the month, with monthly cohorts. See above Calendar for more information.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer HTML -->
+        <footer class="footer-section">
+            <div class="container footer-container">
+                <div class="footer-content">
+                    <!-- Social Media Section -->
+                    <div class="footer-social">
+                        <h3>Follow us on social media</h3>
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/cerebraml/" class="social-link" target="_blank" rel="noopener noreferrer">
+                                <div class="icon-box">
+                                    <i class="fab fa-instagram"></i>
+                                </div>
+                                <span>Instagram</span>
+                                <div class="arrow-icon">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </a>
+                            <a href="https://www.linkedin.com/company/cerebra-ml/" class="social-link" target="_blank" rel="noopener noreferrer">
+                                <div class="icon-box">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </div>
+                                <span>LinkedIn</span>
+                                <div class="arrow-icon">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Divider -->
+                    <div class="footer-divider"></div>
+
+                    <!-- Navigation Section -->
+                    <div class="footer-nav">
+                        <h3>Navigation</h3>
+                        <nav class="footer-links">
+                            <a href="/">Home</a>
+                            <a href="/about">About</a>
+                            <a href="/curriculum">Curriculum</a>
+                            <a href="/contact">Contact</a>
+                            <a href="/register">Register</a>
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- Copyright -->
+                <div class="footer-bottom">
+                    <p>© 2025 Cerebra ML – All Rights Reserved</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <div id="popupOverlay" class="popup-overlay"></div>
+    <div id="eventPopup" class="event-popup">
+        <span class="close-button">×</span>
+        <h2 id="eventTitle"></h2>
+        <p id="eventDate"></p>
+        <p id="eventTime"></p>
+        <p id="eventDescription"></p>
+    </div>
+
+    <!-- Load generic scripts -->
+    <script src="home.js"></script>
+    <script src="shape.js"></script>
+
+</body>
+</html>
